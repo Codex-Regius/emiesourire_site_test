@@ -25,7 +25,7 @@
 <script setup>
 import Navbar from '../components/Navbar.vue';
 import Footer from '../components/Footer.vue';
-import emilie from '../resources/emilie.jpg';
+import emilie from '../resources/logo_v2.png';
 import {SETTINGS} from "../Settings";
 
 </script>

@@ -5,8 +5,10 @@
       <Button style="background: var(--lightpink); color:white;border-radius:5px; font-size:16px;" class="p-button-sm p-button-outlined p-button-secondary"  label="Voir le résultat" icon="pi pi-eye" @click="resultat" />
     </div>
 
-    <p class="text-justify my-3 p-2">
-      Voici un mini-jeu pour deviner laquelle ou lesquelles de mes compétences peuvent t’apporter les bénéfices que j’ai cités plus haut. Tu ne retrouveras pas forcément tous les points de la liste dans ce mini-jeu et j’en ai glissé quelques-un supplémentaires également. Il suffira de faire glisser les bénéfices vers les cases « compétences » correspondantes ; s’ils sont en plusieurs exemplaires c’est que plusieurs de mes compétences peuvent t’apporter ce même bénéfice. Si tu n’es pas un grand fan de contenu interactif j’ai pensé à toi également car j’ai ajouté un bouton « Voir le résultat » qui te permettra d’avoir tout de suite les réponses que tu recherches 😁. (Disponible uniquement sur ordinateur)
+    <p class="text-justify my-3 p-2 line-height-4">
+      Voici un mini-jeu pour deviner laquelle ou lesquelles de mes compétences peuvent t’apporter les bénéfices que j’ai cités plus haut. Tu ne retrouveras pas forcément tous les points de la liste dans ce mini-jeu et j’en ai glissé quelques-un supplémentaires également. Il suffira de faire glisser les bénéfices vers les cases « compétences » correspondantes ; s’ils sont en plusieurs exemplaires c’est que plusieurs de mes compétences peuvent t’apporter ce même bénéfice. Tu remarqueras que je n’ai pas mis de case « passage d’âmes » car, concernant les vivants, c’est une compétence qui complète chacune des autres et je n’aurais pas trouvé pertinent de la rajouter au jeu ; et concernant les défunts, je trouvais le texte de présentation de la compétence assez clair.
+      <br /> <br />
+      Si tu n’es pas un grand fan de contenu interactif j’ai pensé à toi également car j’ai ajouté un bouton « Voir le résultat » qui te permettra d’avoir tout de suite les réponses que tu recherches 😁. (Disponible uniquement sur ordinateur)
     </p>
 
     <div class="flex justify-content-around">

@@ -14,7 +14,7 @@
       Si tu n’es pas un grand fan de contenu interactif j’ai pensé à toi également car j’ai ajouté un bouton « Voir le résultat » qui te permettra d’avoir tout de suite les réponses que tu recherches 😉. (Disponible uniquement sur ordinateur)
     </p> -->
     <p class="line-height-4 text-justify">
-      Bonjour et bienvenue à la belle âme que tu es. Que tu sois arrivé(e) par hasard, parce-qu’on t’a parlé de moi, parce que tu as fait une recherche internet sur certaines pratiques auxquelles je suis formée ou que tu aies découvert ma carte de visite, je suis ravie que tu sois ici aujourd’hui.
+      Bonjour et bienvenue à la belle âme que tu es. Que tu sois arrivé(e) par hasard, parce-qu’on t’a parlé de moi ou parce que tu as fait une recherche internet sur les centres d'intérêts que l'on a en commun, je suis ravie que tu sois ici aujourd’hui.
       Saches que tu auras toujours ta place dans cet espace que j’ai créé, que tu choisisses ou non de prendre une séance avec moi.
       Peut-être que je pourrais t’aider d’une autre manière que celle que tu imagines, qui sait ?
       Je t’invite à aller voir plus bas dans le site et à continuer ton exploration, j’ai beaucoup de choses à partager avec toi.

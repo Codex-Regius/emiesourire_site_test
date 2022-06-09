@@ -5,7 +5,7 @@
       <h2>Emiesourire</h2>
     </router-link>
     <ul class="menu px-3" :class=" burger ? 'active' : '' ">
-      <li v-for="item in items" :key="item.label">
+      <li v-for="item in items" :key="item.label" :style="[ item.label == 'Mon espace' ? 'opacity: .5' : '']">
         <router-link :to="item.to" custom v-slot="{href, route, navigate, isActive, isExactActive}">
           <a :href="href" @click="navigate" :class="{'active-link': isActive, 'active-link-exact': isExactActive}">{{item.label}}</a>
         </router-link>
@@ -42,6 +42,10 @@ let items = ref([
     label: "Contact",
     icon: "pi pi-home",
     to : "/contact"
+  },
+  {
+    label: "Mon espace",
+    to : "/"
   }
 ])
 </script>
@@ -129,7 +133,7 @@ ul {
     top: 6rem;
     text-align: center;
     padding: 16px 0;
-    border-top: 1px solid;
+    border-bottom: 1px solid var(--darkgreen);
   }
   .menu.active{
     left:0;
