@@ -1,0 +1,80 @@
+@font-face {
+  font-family: Adam Script;
+  src: url('./fonts/AdamScript.ttf');
+}
+@font-face {
+  font-family: Alegreya;
+  src: url('./fonts/Alegreya.ttf');
+}
+@font-face {
+  font-family: Adam Script Thin;
+  src: url('./fonts/AdamScriptThin.ttf');
+}
+@font-face {
+  font-family: Adam Script Light;
+  src: url('./fonts/AdamScriptLight.ttf');
+}
+
+
+/* Carousel override */
+.p-carousel .p-carousel-indicators {
+  display: none;
+}
+.p-link .pi {
+  font-size: 2.5rem;
+  color: lightgray;
+}
+.p-carousel .p-carousel-content .p-carousel-prev, .p-carousel .p-carousel-content .p-carousel-next {
+  width: 5rem;
+  height: 5rem;
+}
+.p-carousel-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Button override */
+.p-button:enabled:hover {
+  background: unset;
+  color: #000;
+  border-color: unset;
+}
+.p-button.p-button-icon-only {
+  width: unset;
+  padding: unset;
+}
+.p-button:focus {
+  outline: 0 none;
+  outline-offset: 0;
+  box-shadow: unset;
+}
+
+/* Tabview override */
+.p-tabview .p-tabview-nav {
+  background: transparent;
+  border: 1px solid var(--bluegray-200);
+  border-width: 0 0 2px 0;
+}
+.p-tabview .p-tabview-panels{
+  background: var(--lightgreen);
+  font-weight: 300;
+  color: black;
+  letter-spacing: .7px;
+}
+.p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+  background: var(--darkgreen);
+  border-color: var(--darkgreen);
+  color: white;
+}
+.p-tabview .p-tabview-nav li .p-tabview-nav-link:not(.p-disabled):focus {
+  outline: 0 none;
+  outline-offset: 0;
+  box-shadow: unset;
+}
+.p-tabview .p-tabview-nav li .p-tabview-nav-link{
+  background: transparent;
+  border: solid var(--bluegray-200);
+  color: var(--bluegray-500);
+  border-color: transparent transparent var(--bluegray-200) transparent;
+}

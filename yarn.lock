@@ -54,6 +54,11 @@
     "@vue/compiler-dom" "3.2.37"
     "@vue/shared" "3.2.37"
 
+"@vue/devtools-api@^6.0.0", "@vue/devtools-api@^6.0.0-beta.11":
+  version "6.1.4"
+  resolved "https://registry.yarnpkg.com/@vue/devtools-api/-/devtools-api-6.1.4.tgz#b4aec2f4b4599e11ba774a50c67fa378c9824e53"
+  integrity sha512-IiA0SvDrJEgXvVxjNkHPFfDx6SXw0b/TUkqMcDZWNg9fnCAHbTpoo59YfJ9QLFkwa3raau5vSlRVzMSLDnfdtQ==
+
 "@vue/reactivity-transform@3.2.37":
   version "3.2.37"
   resolved "https://registry.yarnpkg.com/@vue/reactivity-transform/-/reactivity-transform-3.2.37.tgz#0caa47c4344df4ae59f5a05dde2a8758829f8eca"
@@ -293,6 +298,16 @@ postcss@^8.1.10, postcss@^8.4.13:
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
 
+primeflex@^3.2.0:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/primeflex/-/primeflex-3.2.1.tgz#dc557b7e895dd0496a3681fb0d8841d2ddca5abf"
+  integrity sha512-sGDJ4mh2fG19xa1yc4IPGSQ8MUMyu5nU+tYnl27AFuFHhX8XwEA7fWCtWyBbclclVhXtre+Kf9WobWPnfxWAEQ==
+
+primevue@^3.12.6:
+  version "3.13.1"
+  resolved "https://registry.yarnpkg.com/primevue/-/primevue-3.13.1.tgz#34d117e9f58a481d8f80340237ff298e441ca99d"
+  integrity sha512-NrXSw8ifdvVlmwzI3MQlKnbvDyQXiGZSYiNax14Vh+gFOyfrZRoG11aludRfY82joxtApVdj7PCtzUiqc45o4g==
+
 resolve@^1.22.0:
   version "1.22.0"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.22.0.tgz#5e0b8c67c15df57a89bdbabe603a002f21731198"
@@ -341,6 +356,13 @@ vite@^2.9.9:
   optionalDependencies:
     fsevents "~2.3.2"
 
+vue-router@^4.0.15:
+  version "4.0.15"
+  resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-4.0.15.tgz#b4a0661efe197f8c724e0f233308f8776e2c3667"
+  integrity sha512-xa+pIN9ZqORdIW1MkN2+d9Ui2pCM1b/UMgwYUCZOiFYHAvz/slKKBDha8DLrh5aCG/RibtrpyhKjKOZ85tYyWg==
+  dependencies:
+    "@vue/devtools-api" "^6.0.0"
+
 vue@^3.2.25:
   version "3.2.37"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.2.37.tgz#da220ccb618d78579d25b06c7c21498ca4e5452e"
@@ -351,3 +373,10 @@ vue@^3.2.25:
     "@vue/runtime-dom" "3.2.37"
     "@vue/server-renderer" "3.2.37"
     "@vue/shared" "3.2.37"
+
+vuex@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/vuex/-/vuex-4.0.2.tgz#f896dbd5bf2a0e963f00c67e9b610de749ccacc9"
+  integrity sha512-M6r8uxELjZIK8kTKDGgZTYX/ahzblnzC4isU1tpmEuOIIKmV+TRdc+H4s8ds2NuZ7wpUTdGRzJRtoj+lI+pc0Q==
+  dependencies:
+    "@vue/devtools-api" "^6.0.0-beta.11"
