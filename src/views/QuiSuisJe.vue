@@ -25,7 +25,7 @@
 <script setup>
 import Navbar from '../components/Navbar.vue';
 import Footer from '../components/Footer.vue';
-import emilie from '../resources/logo_v2.png';
+import emilie from '../resources/emilie.png';
 import {SETTINGS} from "../Settings";
 
 </script>
@@ -47,9 +47,18 @@ img {
   border-radius: 10px;
   box-shadow: 0 0 3px
 }
+
 @media screen and (min-width: 1600px) {
   .container {
     padding-bottom: 100px;
+  }
+  .picture {
+    max-width: 20%;
+  }
+}
+@media screen and (min-width: 1700px) {
+  .picture {
+    max-width: 15%;
   }
 }
 
