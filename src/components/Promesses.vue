@@ -1,8 +1,8 @@
 <template>
-  <div class="px-4 py-5">
-    <h3 class="text-left">Quels bénéfices puis-je t’apporter ? </h3>
-    <h5 class="text-left mb-0"> Je peux te proposer mon aide si tu souhaites:  </h5>
-    <div class="flex flex-wrap justify-content-around">
+  <div class="px-4 py-5 p-custom-center">
+    <h3 class="text-left p-custom-center m-custom-center">Quels bénéfices puis-je t’apporter ? </h3>
+    <h5 class="text-left mb-0 p-custom-center m-custom-center"> Je peux te proposer mon aide si tu souhaites:  </h5>
+    <div class="flex flex-wrap justify-content-around p-custom-center m-custom-center">
       <div class="liste-promesses">
         <ul class="m-0 px-3 py-2">
           <li class="text-justify my-2">(Re)découvrir qui tu es vraiment</li>

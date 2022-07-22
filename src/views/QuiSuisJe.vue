@@ -2,11 +2,11 @@
 
   <Navbar />
 
-  <div class="px-4 pb-5 container" style="padding-top: 100px; background-color: var(--snow);">
+  <div class="px-4 pb-5 container p-custom-center" style="padding-top: 100px; background-color: var(--snow);">
 
-  <h1 class="pt-5 text-left" style="margin:0"> Qui suis je ? </h1>
+  <h1 class="pt-5 text-left p-custom-center m-custom-center" style="margin:0"> Qui suis je ? </h1>
 
-  <article class="p-5">
+  <article class="py-5 p-custom-center m-custom-center" style="padding-right: 2rem; padding-left: 2rem;">
     <div class="picture">
       <img :src=" (SETTINGS.DEV ? SETTINGS.ipDEV : '') + emilie" alt="" class="mr-3 mt-2 ">
     </div>

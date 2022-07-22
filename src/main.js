@@ -12,6 +12,11 @@ import Button from '../node_modules/primevue/button'
 import Carousel from '../node_modules/primevue/carousel';
 import InputText from 'primevue/inputtext';
 import Textarea from 'primevue/textarea';
+import Toast from 'primevue/toast';
+import ScrollTop from 'primevue/scrolltop';
+
+// Primevue Components to use
+import ToastService from 'primevue/toastservice';
 
 // CSS
 import 'primevue/resources/primevue.min.css';               //core css
@@ -23,6 +28,7 @@ createApp(App)
     .use(store)
     .use(router)
     .use(Primevue)
+    .use(ToastService)
     .component('Menubar', Menubar)
     .component('TabView', TabView)
     .component('TabPanel', TabPanel)
@@ -30,4 +36,6 @@ createApp(App)
     .component('Carousel', Carousel)
     .component('InputText', InputText)
     .component('Textarea', Textarea)
+    .component('Toast', Toast)
+    .component('ScrollTop', ScrollTop)
     .mount('#app')

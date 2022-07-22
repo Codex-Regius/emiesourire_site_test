@@ -3,14 +3,16 @@
 
   <div class="m-auto" style="padding-top: 100px;">
 
+    <Toast />
+
     <section class="flex flex-wrap contact m-auto mx-8 my-8" >
 
-      <form action="/#" method="post" class="flex flex-column m-auto my-5 p-3" style="opacity: .5;">
+      <form class="flex flex-column m-auto my-5 p-3" >
         <h3 class="m-0 mb-3"> Par email </h3>
-        <InputText disabled class="m-3 p-3" placeholder="Nom" type="text" v-model="username" required />
-        <InputText disabled class="m-3 p-3" placeholder="Email" type="email" v-model="username" required />
-        <Textarea disabled placeholder="Message" class="m-3 p-3" rows="5" cols="30" required />
-        <Button class="m-auto mt-3" type="submit" label="Envoyer" disabled style="background-color: #FAFAFA; color: black; border-color: black; width: fit-content" />
+        <InputText class="m-3 p-3" placeholder="Nom" name="nom" type="text" v-model="username" required />
+        <InputText class="m-3 p-3" placeholder="Email" name="email" type="email" v-model="email" required />
+        <Textarea placeholder="Message" name="message" class="m-3 p-3" rows="5" cols="30" v-model="message" required />
+        <Button class="m-auto mt-3" @click="sendEmail" label="Envoyer" style="background-color: #FAFAFA; color: black; border-color: black; width: fit-content" />
       </form>
 
       <hr class="mx-0 my-4">
@@ -35,8 +37,29 @@
 <script setup>
 import Navbar from '../components/Navbar.vue';
 import Footer from '../components/Footer.vue';
+import {ref} from "@vue/reactivity";
+import { useToast } from "primevue/usetoast";
 
-let username = "";
+let username = ref("");
+let email = ref("");
+let message = ref("");
+const toast = useToast();
+
+const sendEmail = () => {
+
+  let data = new FormData();
+  data.append("nom", username.value);
+  data.append("email", email.value);
+  data.append("message", message.value)
+
+  toast.add({severity:'success', summary: 'Email', detail:'Message envoyé', life: 3000});
+  username.value = "";
+  email.value = "";
+  message.value = "";
+
+}
+
+
 
 </script>
 

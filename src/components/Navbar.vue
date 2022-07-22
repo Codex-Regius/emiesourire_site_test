@@ -5,10 +5,17 @@
       <h2>Emiesourire</h2>
     </router-link>
     <ul class="menu px-3" :class=" burger ? 'active' : '' ">
-      <li v-for="item in items" :key="item.label" :style="[ item.label == 'Mon espace' ? 'opacity: .5' : '']">
-        <router-link :to="item.to" custom v-slot="{href, route, navigate, isActive, isExactActive}">
+      <li v-for="item in items" :key="item.label" :class="item.label === 'Accueil' ? 'accueil-menu':''" >
+        <router-link :to="item.to" custom v-slot="{href, route, navigate, isActive, isExactActive}" >
           <a :href="href" @click="navigate" :class="{'active-link': isActive, 'active-link-exact': isExactActive}">{{item.label}}</a>
         </router-link>
+
+        <ul class="submenu" v-if="($route.path === '/' || $route.path === '/temoignages' || $route.path === '/benefices' || $route.path === '/competences') && item.children" >
+          <li class="text-justify" v-for="c in item.children" :key="c.label" >
+            <a @click="burger=!burger" :href="c.to"> {{c.label}} </a>
+          </li>
+        </ul>
+
       </li>
     </ul>
     <Button class="hamburger mr-3" @click="burger=!burger" :icon="burger ? 'pi pi-times' : 'pi pi-bars' "  />
@@ -26,7 +33,12 @@ let items = ref([
   {
     label: "Accueil",
     icon: "pi pi-home",
-    to : "/"
+    to : "/",
+    children: [
+      {label: "Bénéfices", to: '#promesses'},
+      {label: "Compétences", to: '#outils'},
+      {label: "Temoignages", to: '#temoignages'}
+    ]
   },
   {
     label: "Prestations",
@@ -42,10 +54,6 @@ let items = ref([
     label: "Contact",
     icon: "pi pi-home",
     to : "/contact"
-  },
-  {
-    label: "Mon espace",
-    to : "/"
   }
 ])
 </script>
@@ -70,7 +78,7 @@ ul {
   padding: 20px 0px;
   background-color: white;
   color: black;
-  z-index: 10000;
+  z-index: 100;
   position: fixed;
   width: 100%;
   border-bottom: 1px solid var(--darkgreen);
@@ -103,10 +111,27 @@ ul {
 .menu a {
   color: black;
 }
+.menu li {
+  position: relative;
+}
 .menu li:hover {
   background-color: var(--lightgreen);
   border-radius: 5px;
   transition: .4s ease;
+}
+
+.submenu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border: 3px solid var(--lightgreen)
+}
+.submenu > li {
+  margin :0 !important;
+  width: 100%;
 }
 
 /*RESPONSIVE NAVBAR MENU STARTS*/
@@ -147,6 +172,12 @@ ul {
   }
   .hamburger {
     display: block;
+  }
+}
+
+@media screen and (min-width: 920px) {
+  .accueil-menu:hover > ul{
+    display: flex;
   }
 }
 </style>

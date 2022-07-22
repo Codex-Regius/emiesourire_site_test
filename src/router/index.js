@@ -4,6 +4,8 @@ import Home from '../views/Home.vue';
 import QuiSuisJe from '../views/QuiSuisJe.vue';
 import Contact from "../views/Contact.vue";
 import Prestations from "../views/Prestations.vue";
+import MentionsLegales from '../views/MentionsLegales.vue';
+import Admin from '../views/Admin.vue';
 
 const routes = [
     {
@@ -25,6 +27,20 @@ const routes = [
         path: '/contact',
         name: 'Contact',
         component: Contact
+    },
+    {
+        path: '/mentions-legales',
+        name: 'Mentions Légales',
+        component: MentionsLegales
+    },
+    {
+        path: '/admin',
+        name: 'Admin',
+        component: Admin
+    },
+    {
+        path: '/:pathMatch(.*)*',
+        component: Home
     }
 ]
 

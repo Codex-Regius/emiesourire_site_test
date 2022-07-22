@@ -3,11 +3,13 @@
 
   <div class="container" style="">
 
-    <p class="text-justify p-5 m-5">
-      J’ai caché mes prestations derrière ces cartes d’oracle. Pose ta question (par exemple « Quelle prestation me conviendrait le mieux en premier lieu ? », concentre-toi sur les ressentis dans ton corps quand tu regardes les cartes et suis ton intuition 😊 Il ne s’agit pas de se concentrer pour mieux voir à travers mais au contraire de fermer les yeux, de lâcher prise et de s’écouter. Clique pour découvrir la prestation qui répond à ta question. Tu peux même cliquer sur plusieurs cartes si tu le veux. Leur emplacement est aléatoire, à chaque fois que tu reviendras sur cet onglet elles changeront de place, comme ça tu pourras réitérer l’expérience à chaque fois que tu le souhaites.
-    </p>
+    <div class="p-custom-center">
+      <p class="text-justify py-5 px-4 m-5 line-height-3 p-custom-center m-custom-center">
+        J’ai caché mes prestations derrière ces cartes d’oracle. Pose ta question (par exemple « Quelle prestation me conviendrait le mieux en premier lieu ? », concentre-toi sur les ressentis dans ton corps quand tu regardes les cartes et suis ton intuition 😊 Il ne s’agit pas de se concentrer pour mieux voir à travers mais au contraire de fermer les yeux, de lâcher prise et de s’écouter. Clique pour découvrir la prestation qui répond à ta question. Tu peux même cliquer sur plusieurs cartes si tu le veux. Leur emplacement est aléatoire, à chaque fois que tu reviendras sur cet onglet elles changeront de place, comme ça tu pourras réitérer l’expérience à chaque fois que tu le souhaites.
+      </p>
+    </div>
 
-    <section class="my-3 mx-1 flex flex-wrap justify-content-evenly align-items-center">
+    <section class="my-3 mx-1 flex justify-content-evenly align-items-center">
 
       <article class="m-2" v-for="(card, index) in cards" :key="index" @click.prevent="flipCard(card)">
         <div class="article-container" :class="[card.flipped ? 'flip' : '']">
@@ -62,13 +64,14 @@ onBeforeMount(() => {
   background: var(--snow)
 }
 article{
-  width: 380px;
-  height: 651px;
+  width: 300px;
+  height: 150px;
   cursor: pointer;
   border-radius: 30px;
 }
 .flip {
-  transform: rotateY(180deg);
+  transform:translate3d(0,0,10px) rotateY(180deg) scale(1.5);
+  z-index: 200;
 }
 .article-container{
   position: relative;
@@ -93,8 +96,30 @@ article:hover {
   border-radius: 30px;
 }
 img {
-  border-radius: 30px;
+  border-radius: 5%;
   box-shadow: 0 0 10px var(--darkgreen);
   width: 100%
+}
+@media screen and (max-width: 450px){
+  .flip {
+    transform:translate3d(0,0,10px) rotateY(180deg) scale(1) translateY(-50%);
+    position: absolute;
+    top: 75%;
+    left: 3%;
+    z-index: 200;
+  }
+}
+@media screen and (min-width: 451px) and (max-width: 800px){
+  article {
+    height: 350px
+  }
+  .flip {
+    transform:translate3d(0,0,10px) rotateY(180deg) scale(2);
+  }
+}
+@media screen and (min-width: 801px){
+  article {
+    height: 550px
+  }
 }
 </style>
