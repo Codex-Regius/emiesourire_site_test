@@ -6,6 +6,8 @@ import Contact from "../views/Contact.vue";
 import Prestations from "../views/Prestations.vue";
 import MentionsLegales from '../views/MentionsLegales.vue';
 import Admin from '../views/Admin.vue';
+import Numerologie from '../views/admin/Numerologie.vue';
+import Temoignages from '../views/admin/Temoignages.vue';
 
 const routes = [
     {
@@ -36,7 +38,11 @@ const routes = [
     {
         path: '/admin',
         name: 'Admin',
-        component: Admin
+        component: Admin,
+        children: [
+            {path: "numerologie", name: "Numerologie", component: Numerologie},
+            {path: "temoignages", name: "Temoignages", component: Temoignages}
+        ]
     },
     {
         path: '/:pathMatch(.*)*',

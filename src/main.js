@@ -14,6 +14,7 @@ import InputText from 'primevue/inputtext';
 import Textarea from 'primevue/textarea';
 import Toast from 'primevue/toast';
 import ScrollTop from 'primevue/scrolltop';
+import Panel from 'primevue/panel';
 
 // Primevue Components to use
 import ToastService from 'primevue/toastservice';
@@ -38,4 +39,5 @@ createApp(App)
     .component('Textarea', Textarea)
     .component('Toast', Toast)
     .component('ScrollTop', ScrollTop)
+    .component('Panel', Panel)
     .mount('#app')

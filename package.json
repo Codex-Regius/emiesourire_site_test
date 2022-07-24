@@ -8,6 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "pdfmake": "^0.2.5",
     "primeflex": "^3.2.0",
     "primevue": "^3.12.6",
     "vue": "^3.2.25",
