@@ -177,6 +177,7 @@ import { ref } from "@vue/reactivity";
 import { useToast } from "primevue/usetoast";
 import {cheminDeVie, besoinDeRealisationOuAffectif, objectifDeVie, defis, anneeCycleKarmique, SPECIAL} from '../../numerologie/numerologie.js';
 import {texte_objectif_de_vie, texte_besoin_de_realisation, texte_besoin_affectif, texte_chemin_de_vie, texte_defis, texte_karmique, text_special_nombre, texte_images_aux_autres} from '../../numerologie/texteNumerologie.js';
+import PDF from '../../numerologie/pdf.js';
 import pdfMake from 'pdfmake/build/pdfmake.js';
 import pdfFonts from 'pdfmake/build/vfs_fonts';
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
@@ -201,21 +202,8 @@ pdfMake.fonts = {
   }
 }
 
-import PDF from '../../numerologie/pdf.js';
-
 const toast = useToast();
-
-let informations = ref([
-  {label: 'Prénom', value: '' },
-  {label: 'Deuxième prénom', value: '' },
-  {label: 'Troisième prénom', value: '' },
-  {label: 'Quatrième prénom', value: '' },
-  {label: 'Nom', value: '' },
-  {label: 'Date de naissance (12/04/1995)', value: '' }
-])
-
 let anneeEnCours = new Date().getFullYear().toString();
-
 let toggleAll = ref(true);
 
 let chemin = ref('');
@@ -227,6 +215,15 @@ let karmique = ref('');
 let specialNumbers = ref({});
 
 let jour = ref("");
+
+let informations = ref([
+  {label: 'Prénom', value: '' },
+  {label: 'Deuxième prénom', value: '' },
+  {label: 'Troisième prénom', value: '' },
+  {label: 'Quatrième prénom', value: '' },
+  {label: 'Nom', value: '' },
+  {label: 'Date de naissance (12/04/1995)', value: '' }
+])
 
 function calculer() {
   if(
