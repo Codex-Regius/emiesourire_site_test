@@ -179,7 +179,7 @@ import {cheminDeVie, besoinDeRealisationOuAffectif, objectifDeVie, defis, anneeC
 import {texte_objectif_de_vie, texte_besoin_de_realisation, texte_besoin_affectif, texte_chemin_de_vie, texte_defis, texte_karmique, text_special_nombre, texte_images_aux_autres} from '../../numerologie/texteNumerologie.js';
 import PDF from '../../numerologie/pdf.js';
 import pdfMake from 'pdfmake/build/pdfmake.js';
-import pdfFonts from 'pdfmake/build/vfs_fonts';
+import pdfFonts from 'pdfmake/build/vfs_fonts.js';
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
 pdfMake.fonts = {
